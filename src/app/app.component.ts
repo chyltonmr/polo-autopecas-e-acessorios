@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms'; 
-
-
-
+import { RouterOutlet } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, InputTextModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  standalone: true,
+  imports: [
+    RouterOutlet, 
+    ButtonModule],
 })
-
-export class AppComponent  {
-
-  value!: string;
-  
-  }
+export class AppComponent {
+  title = 'polo-autopecas-e-acessorios-gestao';
+}
